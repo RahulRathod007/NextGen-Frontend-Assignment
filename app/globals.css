@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --ink: #0b1c18;
+  --brand: #0f766e;
+  --accent: #d97706;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--ink);
+  background-color: #f3f7f5;
+  min-height: 100vh;
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-semibold transition focus:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50;
+  }
+
+  .btn-primary {
+    @apply btn bg-brand text-white hover:bg-brand-dark shadow-sm;
+  }
+
+  .btn-secondary {
+    @apply btn bg-white text-ink border border-surface-elev hover:bg-surface-soft;
+  }
+
+  .btn-danger {
+    @apply btn bg-red-600 text-white hover:bg-red-700;
+  }
+
+  .btn-ghost {
+    @apply btn bg-transparent text-ink-soft hover:bg-surface-elev;
+  }
+
+  .field {
+    @apply w-full rounded-xl border border-surface-elev bg-white px-4 py-2.5 text-sm text-ink placeholder:text-ink-muted/70 outline-none transition focus:border-brand focus:shadow-glow disabled:bg-surface-soft;
+  }
+
+  .label {
+    @apply mb-1.5 block text-sm font-medium text-ink-soft;
+  }
+
+  .panel {
+    @apply rounded-2xl border border-white/60 bg-white/90 shadow-panel backdrop-blur-sm;
+  }
+
+  .chip {
+    @apply inline-flex items-center rounded-lg px-2 py-0.5 text-xs font-semibold;
+  }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #e8f0ec;
+}
+::-webkit-scrollbar-thumb {
+  background: #94a3b8;
+  border-radius: 999px;
+}
