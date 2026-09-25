@@ -43,11 +43,22 @@ npm run build
 npm start
 ```
 
+## Live demo
+
+**https://product-admin-dashboard-three-phi.vercel.app**
+
 ## Deploy (Vercel)
 
-1. Push this repo to GitHub.
-2. Import the project in Vercel.
-3. Deploy — no env vars required (DummyJSON is public).
+Already deployed and linked to GitHub (`RahulRathod007/NextGen-Frontend-Assignment`).  
+New pushes to `main` redeploy automatically.
+
+To redeploy manually:
+
+```bash
+npx vercel --prod
+```
+
+No env vars required (DummyJSON is public).
 
 ## Project structure
 
